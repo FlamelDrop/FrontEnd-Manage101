@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  pms-fronend-stg:
+    container_name: pms-fronend-stg
+    restart: always
+    build: ./
+    ports:
+      - "3011:3000"
+    volumes:
+      - .:/usr/src/app
+    command: >
+      bash -c "
+      yarn &&
+      yarn start:staging"

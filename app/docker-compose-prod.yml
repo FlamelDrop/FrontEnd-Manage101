@@ -1,0 +1,15 @@
+version: '3'
+services:
+
+  pms-fronend-prod:
+    container_name: pms-fronend-prod
+    restart: always
+    build: ./
+    ports:
+      - "8007:3000"
+    volumes:
+      - .:/usr/src/app
+    command: >
+      bash -c "
+      yarn &&
+      yarn start:production"
