@@ -47,7 +47,8 @@ const axiosService = (config: IAxiosService) => {
 export const callGet = (url: string, params?: any, headers?: any) =>
   call(() =>
     axiosService({ url, headers })
-      .get(url, { params: params })
+      // .get(url, { params: params })
+      .get(url)
       .then((response) => response.data)
       .catch((error) => {
         throw error.response?.data || error;

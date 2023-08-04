@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable import/prefer-default-export */
 import _ from 'lodash';
+
 import { createTheme, responsiveFontSizes } from '@material-ui/core';
 // import { createTheme } from '@material-ui/core/styles'
 import { baseConfig, themeConfigs } from './themes';
@@ -20,5 +21,5 @@ export function createThemeCore(settings = {} as any) {
     theme = responsiveFontSizes(theme);
   }
 
-  return theme;
+  return theme;;
 }

@@ -15,12 +15,14 @@ import { ActionSaga } from 'src/services/action.saga';
 import { IStates } from 'src/stores/root.reducer';
 import { generateTask } from 'src/services/utils';
 import { useSnackbar } from 'notistack';
-import { isArray } from 'lodash';
+// import { isArray } from 'lodash';
 import moment from 'moment';
 import * as yup from 'yup';
 import 'date-fns'
 import Tooltip from '@mui/material/Tooltip';
 import { CustomBtn } from 'src/components/atom';
+
+var isArray = require("isarray")
 
 const useStyles = makeStyles(() => ({
     projectName: {

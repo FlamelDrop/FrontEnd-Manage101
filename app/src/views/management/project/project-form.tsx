@@ -16,9 +16,11 @@ import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
 import { routeLink } from 'src/routes';
 import { CentralAction } from 'src/stores/central/central.action';
-import { isArray } from 'lodash';
+// import { isArray } from 'lodash';
 import { CustomBtn } from 'src/components/atom';
 import Tooltip from '@mui/material/Tooltip';
+
+var isArray = require("isarray")
 
 const useStyles = makeStyles(() => ({
     paper: {
